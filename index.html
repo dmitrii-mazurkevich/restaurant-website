@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="home.metaTitle">Kvali - Georgian kitchen and qvevri wine in Batumi</title>
+<meta name="description" data-i18n-attr="content:home.metaDesc" content="Georgian restaurant by the sea in Batumi: khachapuri from the tone oven, hand-folded khinkali, qvevri wine. Book a table online.">
+<meta name="theme-color" content="#2A1F1A">
+<link rel="canonical" href="https://dmitrii-mazurkevich.github.io/restaurant-website/">
+<link rel="alternate" hreflang="en" href="https://dmitrii-mazurkevich.github.io/restaurant-website/index.html?lang=en">
+<link rel="alternate" hreflang="ru" href="https://dmitrii-mazurkevich.github.io/restaurant-website/index.html?lang=ru">
+<link rel="alternate" hreflang="ka" href="https://dmitrii-mazurkevich.github.io/restaurant-website/index.html?lang=ka">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Kvali - Georgian kitchen and qvevri wine in Batumi">
+<meta property="og:description" content="Georgian restaurant by the sea in Batumi: khachapuri from the tone oven, hand-folded khinkali, qvevri wine. Book a table online.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23A4302B'/%3E%3Cpath d='M14 34c6-12 30-12 36 0-6 12-30 12-36 0z' fill='%23F5EFE6'/%3E%3Ccircle cx='32' cy='34' r='5' fill='%23E9A825'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Yeseva+One&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  (function () {
+    var d = document.documentElement, langs = ['en', 'ru', 'ka'], lang = null;
+    var m = location.search.match(/[?&]lang=([a-z]{2})/i);
+    if (m && langs.indexOf(m[1].toLowerCase()) > -1) lang = m[1].toLowerCase();
+    if (!lang) { try { var s = localStorage.getItem('kv-lang'); if (langs.indexOf(s) > -1) lang = s; } catch (e) {} }
+    if (!lang) { var n = navigator.language || ''; lang = /^ru/i.test(n) ? 'ru' : /^ka/i.test(n) ? 'ka' : 'en'; }
+    d.setAttribute('data-lang', lang);
+    if (lang !== 'en') { d.className += ' i18n-pending'; setTimeout(function () { d.classList.remove('i18n-pending'); }, 1200); }
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Kvali",
+  "servesCuisine": "Georgian",
+  "priceRange": "₾₾",
+  "acceptsReservations": "https://dmitrii-mazurkevich.github.io/restaurant-website/booking.html",
+  "hasMenu": "https://dmitrii-mazurkevich.github.io/restaurant-website/menu.html",
+  "telephone": "+995555000000",
+  "address": { "@type": "PostalAddress", "streetAddress": "14 Seaside Street", "addressLocality": "Batumi", "addressCountry": "GE" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "17:00", "closes": "23:00" }
+  ]
+}
+</script>
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Kvali, home">
+      <span class="logo__mark" aria-hidden="true">ქ</span><span class="logo__name">Kvali</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="menu.html" data-i18n="nav.menu">Menu</a>
+      <a href="index.html#visit" data-i18n="nav.visit">Visit</a>
+      <a class="btn btn--sm menu__cta" href="booking.html" data-i18n="nav.book">Book a table</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-lang="ka" aria-pressed="false">KA</button>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-i18n-attr="aria-label:nav.menuBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow" data-i18n="home.eyebrow">Georgian kitchen · Batumi</p>
+      <h1 class="hero__title" data-i18n-html="home.title">A long table, <em>warm bread</em> and qvevri wine</h1>
+      <p class="hero__lede" data-i18n="home.lede">We cook the way Georgian families cook for guests: generous, unhurried, with bread straight from the tone oven. Come for one khachapuri, stay for the toasts.</p>
+      <div class="hero__actions">
+        <a class="btn" href="booking.html" data-i18n="home.cta1">Book a table</a>
+        <a class="btn btn--ghost" href="menu.html" data-i18n="home.cta2">See the menu</a>
+      </div>
+      <p class="hero__hours" data-i18n="home.hoursShort">Open today from 12:00 · Mondays from 17:00</p>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="260" cy="230" r="220" fill="#3B2A22"/>
+        <ellipse cx="260" cy="250" rx="190" ry="150" fill="#D9CBB5"/><ellipse cx="260" cy="244" rx="170" ry="132" fill="#EFE6D8"/>
+        <path d="M110 244c50-80 250-80 300 0-50 80-250 80-300 0z" fill="#B97B3A"/>
+        <path d="M160 244c40-42 160-42 200 0-40 42-160 42-200 0z" fill="#F2D27A"/>
+        <circle cx="260" cy="244" r="28" fill="#E9A825"/>
+        <rect x="300" y="232" width="26" height="18" rx="3" fill="#FFF3C9"/>
+        <g fill="#A4302B"><circle cx="420" cy="110" r="22"/><circle cx="450" cy="140" r="12"/></g>
+        <path d="M92 92c20-10 40 0 44 20" stroke="#5F7D45" stroke-width="6" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about">
+    <div>
+      <p class="eyebrow" data-i18n="home.aboutEyebrow">About Kvali</p>
+      <h2 class="h2" data-i18n="home.aboutTitle">"Kvali" means a trace</h2>
+    </div>
+    <div class="about__text">
+      <p data-i18n="home.about1">The trace a good dinner leaves: the smell of bread, a toast you remember, a recipe you want to try at home. Our chef grew up in Adjara and cooks from her grandmother's notebook, with fish from the morning market and wine from small family cellars.</p>
+      <p data-i18n="home.about2">Every dish on the menu lists its allergens, and the staff will tell you what can be made without nuts or dairy. Ask, we like questions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2" data-i18n="home.sigTitle">What to order first</h2>
+      <a class="link link--light" href="menu.html" data-i18n="home.sigAll">Full menu</a>
+    </div>
+    <div class="sig-grid" data-signature></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="h2 mb" data-i18n="home.galTitle">Inside Kvali</h2>
+    <div class="gallery">
+      <figure class="gallery__item"><svg viewBox="0 0 300 220" aria-hidden="true"><rect width="300" height="220" fill="#3B2A22"/><rect x="30" y="40" width="70" height="140" rx="6" fill="#5A4134"/><rect x="200" y="40" width="70" height="140" rx="6" fill="#5A4134"/><g fill="#E9A825" opacity=".85"><circle cx="65" cy="70" r="8"/><circle cx="235" cy="70" r="8"/><circle cx="150" cy="56" r="10"/></g><rect x="90" y="140" width="120" height="16" rx="4" fill="#8A6A4A"/><g fill="#C9A27E"><rect x="104" y="156" width="8" height="40"/><rect x="188" y="156" width="8" height="40"/></g></svg><figcaption data-i18n="home.g1">The main hall in the evening</figcaption></figure>
+      <figure class="gallery__item"><svg viewBox="0 0 300 220" aria-hidden="true"><rect width="300" height="220" fill="#E9DFD0"/><path d="M110 40h80c30 40 40 100 0 150h-80c-40-50-30-110 0-150z" fill="#9C5B3B"/><ellipse cx="150" cy="42" rx="42" ry="10" fill="#7E4630"/><path d="M110 120h80" stroke="#7E4630" stroke-width="4"/><ellipse cx="150" cy="200" rx="90" ry="8" fill="#000" opacity=".1"/></svg><figcaption data-i18n="home.g2">Qvevri in the wine cellar</figcaption></figure>
+      <figure class="gallery__item"><svg viewBox="0 0 300 220" aria-hidden="true"><rect width="300" height="220" fill="#2A1F1A"/><g fill="#F1E4CC"><path d="M60 160c0-40 20-60 40-60s40 20 40 60z"/><path d="M130 150c0-40 20-60 40-60s40 20 40 60z"/><path d="M200 165c0-40 20-60 40-60s40 20 40 60z"/></g><g fill="#E2D0AE"><rect x="94" y="88" width="12" height="16" rx="4"/><rect x="164" y="78" width="12" height="16" rx="4"/><rect x="234" y="93" width="12" height="16" rx="4"/></g></svg><figcaption data-i18n="home.g3">Khinkali, folded by hand</figcaption></figure>
+      <figure class="gallery__item"><svg viewBox="0 0 300 220" aria-hidden="true"><rect width="300" height="220" fill="#A4302B"/><path d="M110 30h50c0 50-6 80-25 80s-25-30-25-80z" fill="rgba(255,255,255,.2)" stroke="#F5EFE6" stroke-width="3"/><path d="M114 60h42c-2 30-8 44-21 44s-19-14-21-44z" fill="#5B1424"/><path d="M135 110v60M112 172h46" stroke="#F5EFE6" stroke-width="4" stroke-linecap="round"/><rect x="180" y="40" width="40" height="140" rx="10" fill="#3B1A14"/><rect x="190" y="20" width="20" height="30" rx="4" fill="#3B1A14"/><rect x="184" y="100" width="32" height="40" rx="3" fill="#F5EFE6"/></svg><figcaption data-i18n="home.g4">Saperavi from a family cellar</figcaption></figure>
+      <figure class="gallery__item"><svg viewBox="0 0 300 220" aria-hidden="true"><rect width="300" height="220" fill="#7FA7B8"/><rect y="130" width="300" height="90" fill="#5C8797"/><circle cx="240" cy="50" r="24" fill="#F3D27A"/><rect x="0" y="160" width="300" height="60" fill="#C9A27E"/><g fill="#F5EFE6"><rect x="40" y="130" width="60" height="10" rx="3"/><rect x="180" y="130" width="60" height="10" rx="3"/></g><path d="M20 160V90h120v70M160 160V90h120v70" stroke="#3B2A22" stroke-width="4" fill="none"/></svg><figcaption data-i18n="home.g5">The terrace by the sea</figcaption></figure>
+      <figure class="gallery__item"><svg viewBox="0 0 300 220" aria-hidden="true"><rect width="300" height="220" fill="#E9DFD0"/><circle cx="150" cy="120" r="80" fill="#D9A15B"/><circle cx="150" cy="120" r="80" fill="none" stroke="#B97B3A" stroke-width="10"/><path d="M90 120c20-20 100-20 120 0" stroke="#B97B3A" stroke-width="4" fill="none" opacity=".5"/></svg><figcaption data-i18n="home.g6">Bread from the tone oven</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="h2 mb" data-i18n="home.revTitle">Guests say</h2>
+    <div class="reviews">
+      <blockquote class="review"><p data-i18n="home.r1">We came for one dinner and returned three times in a week. The adjaruli is the best we had in Batumi.</p><cite data-i18n="home.r1a">Anna, Tbilisi*</cite></blockquote>
+      <blockquote class="review"><p data-i18n="home.r2">The waiter knew which dishes were nut-free without checking. With a child with allergies that means a lot.</p><cite data-i18n="home.r2a">Olga, Almaty*</cite></blockquote>
+      <blockquote class="review"><p data-i18n="home.r3">Amber wine from the qvevri, khinkali and the sea outside. That is the whole review.</p><cite data-i18n="home.r3a">Mark, Berlin*</cite></blockquote>
+    </div>
+    <p class="muted small" data-i18n="home.revNote">* Reviews on this demo site are examples.</p>
+  </div>
+</section>
+
+<section class="section" id="visit">
+  <div class="container visit">
+    <div>
+      <h2 class="h2" data-i18n="home.visitTitle">Visit us</h2>
+      <dl class="facts">
+        <div><dt data-i18n="home.f1">Address</dt><dd data-i18n="home.f1v">14 Seaside Street, Batumi. Five minutes from the Alphabet Tower.</dd></div>
+        <div><dt data-i18n="home.f2">Hours</dt><dd data-i18n-html="home.f2v">Tuesday to Sunday 12:00-23:00<br>Monday 17:00-23:00</dd></div>
+        <div><dt data-i18n="home.f3">Phone</dt><dd><a href="tel:+995555000000">+995 555 00 00 00</a></dd></div>
+        <div><dt data-i18n="home.f4">Groups</dt><dd data-i18n="home.f4v">Up to 40 guests in the main hall. For a supra with a set menu, book a week ahead.</dd></div>
+      </dl>
+      <a class="btn" href="booking.html" data-i18n="home.cta1">Book a table</a>
+    </div>
+    <div class="map" aria-hidden="true">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" fill="#E2D8C8"/><path d="M0 230c80-20 160 10 240-10s120-30 160-20v100H0z" fill="#8FB3C1"/><g stroke="#FFFFFF" stroke-width="10" fill="none"><path d="M0 120h400M140 0v230M290 0v220"/></g><g stroke="#FFFFFF" stroke-width="5" fill="none"><path d="M0 60h400M60 0v240M220 0v220"/></g><circle cx="220" cy="120" r="14" fill="#A4302B"/><circle cx="220" cy="120" r="5" fill="#FFF"/></svg>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div>
+      <p class="logo logo--footer"><span class="logo__mark" aria-hidden="true">ქ</span><span class="logo__name">Kvali</span></p>
+      <p data-i18n="foot.about">Georgian kitchen and qvevri wine by the sea. Bread from the tone oven, khinkali folded by hand.</p>
+    </div>
+    <div>
+      <h2 class="footer__h" data-i18n="foot.hours">Hours</h2>
+      <p data-i18n-html="foot.hoursText">Tue-Sun 12:00-23:00<br>Mon 17:00-23:00</p>
+    </div>
+    <div>
+      <h2 class="footer__h" data-i18n="foot.find">Find us</h2>
+      <p data-i18n-html="foot.address">14 Seaside Street, Batumi<br><a href="tel:+995555000000">+995 555 00 00 00</a></p>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 Kvali</span>
+    <span data-i18n-html="foot.concept">Site by <a href="https://github.com/dmitrii-mazurkevich">Dmitrii Mazurkevich</a>.</span>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/menu-data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

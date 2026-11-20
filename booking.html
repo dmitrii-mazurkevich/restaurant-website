@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="bk.metaTitle">Book a table - Kvali</title>
+<meta name="description" data-i18n-attr="content:bk.metaDesc" content="Book a table at Kvali, Batumi: choose a day, time, number of guests and where to sit.">
+<meta name="theme-color" content="#2A1F1A">
+<link rel="canonical" href="https://dmitrii-mazurkevich.github.io/restaurant-website/booking.html">
+<link rel="alternate" hreflang="en" href="https://dmitrii-mazurkevich.github.io/restaurant-website/booking.html?lang=en">
+<link rel="alternate" hreflang="ru" href="https://dmitrii-mazurkevich.github.io/restaurant-website/booking.html?lang=ru">
+<link rel="alternate" hreflang="ka" href="https://dmitrii-mazurkevich.github.io/restaurant-website/booking.html?lang=ka">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Book a table - Kvali">
+<meta property="og:description" content="Book a table at Kvali, Batumi: choose a day, time, number of guests and where to sit.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23A4302B'/%3E%3Cpath d='M14 34c6-12 30-12 36 0-6 12-30 12-36 0z' fill='%23F5EFE6'/%3E%3Ccircle cx='32' cy='34' r='5' fill='%23E9A825'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Yeseva+One&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  (function () {
+    var d = document.documentElement, langs = ['en', 'ru', 'ka'], lang = null;
+    var m = location.search.match(/[?&]lang=([a-z]{2})/i);
+    if (m && langs.indexOf(m[1].toLowerCase()) > -1) lang = m[1].toLowerCase();
+    if (!lang) { try { var s = localStorage.getItem('kv-lang'); if (langs.indexOf(s) > -1) lang = s; } catch (e) {} }
+    if (!lang) { var n = navigator.language || ''; lang = /^ru/i.test(n) ? 'ru' : /^ka/i.test(n) ? 'ka' : 'en'; }
+    d.setAttribute('data-lang', lang);
+    if (lang !== 'en') { d.className += ' i18n-pending'; setTimeout(function () { d.classList.remove('i18n-pending'); }, 1200); }
+  })();
+</script>
+</head>
+<body data-page="booking">
+<a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Kvali, home">
+      <span class="logo__mark" aria-hidden="true">ქ</span><span class="logo__name">Kvali</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="menu.html" data-i18n="nav.menu">Menu</a>
+      <a href="index.html#visit" data-i18n="nav.visit">Visit</a>
+      <a class="btn btn--sm menu__cta" href="booking.html" data-i18n="nav.book" aria-current="page">Book a table</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-lang="ka" aria-pressed="false">KA</button>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-i18n-attr="aria-label:nav.menuBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="section section--tight">
+  <div class="container bk-wrap">
+    <h1 class="h1" data-i18n="bk.title">Book a table</h1>
+    <p class="lede" data-i18n="bk.lede">Choose a day and time. We hold the table for 20 minutes, and confirm every booking by message.</p>
+
+    <form class="bk" data-booking novalidate>
+      <fieldset class="bk__group">
+        <legend class="bk__legend"><span class="bk__num">1</span> <span data-i18n="bk.day">Day</span></legend>
+        <div class="days" data-days></div>
+      </fieldset>
+
+      <fieldset class="bk__group">
+        <legend class="bk__legend"><span class="bk__num">2</span> <span data-i18n="bk.time">Time</span></legend>
+        <div class="slots" data-slots></div>
+        <p class="error" data-time-error aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset class="bk__group">
+        <legend class="bk__legend"><span class="bk__num">3</span> <span data-i18n="bk.guestsSeat">Guests and seating</span></legend>
+        <div class="bk__row">
+          <div class="stepper" role="group" aria-label="Guests" data-i18n-attr="aria-label:bk.guests">
+            <button type="button" data-guests-minus aria-label="-1">−</button>
+            <span><b data-guests aria-live="polite">2</b> <small data-i18n="bk.people">people</small></span>
+            <button type="button" data-guests-plus aria-label="+1">+</button>
+          </div>
+          <div class="seats">
+            <label class="seat"><input type="radio" name="seat" value="hall" checked><span data-i18n="bk.hall">Main hall</span></label>
+            <label class="seat"><input type="radio" name="seat" value="terrace"><span data-i18n="bk.terrace">Terrace</span></label>
+            <label class="seat"><input type="radio" name="seat" value="cellar"><span data-i18n="bk.cellar">Wine cellar</span></label>
+          </div>
+        </div>
+        <p class="note" data-big hidden></p>
+        <p class="muted small" data-cellar-note aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset class="bk__group">
+        <legend class="bk__legend"><span class="bk__num">4</span> <span data-i18n="bk.contacts">Your details</span></legend>
+        <div class="bk__fields">
+          <div class="field"><label for="bk-name" data-i18n="bk.name">Name</label><input id="bk-name" name="name" autocomplete="name" required><span class="error" aria-live="polite"></span></div>
+          <div class="field"><label for="bk-phone" data-i18n="bk.phone">Phone or WhatsApp</label><input id="bk-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+995 ..."><span class="error" aria-live="polite"></span></div>
+          <div class="field field--wide"><label for="bk-note"><span data-i18n="bk.note">Comment</span> <span class="muted" data-i18n="bk.optional">(optional)</span></label>
+            <textarea id="bk-note" name="note" rows="3" data-i18n-attr="placeholder:bk.notePh" placeholder="A birthday, a high chair, a nut allergy..."></textarea></div>
+        </div>
+        <div class="consent"><label class="check"><input type="checkbox" name="consent" required><span data-i18n="bk.consent">I agree that the restaurant can contact me about this booking</span></label><span class="error" aria-live="polite"></span></div>
+      </fieldset>
+
+      <div class="bk__submit">
+        <p class="bk__summary" data-bk-summary aria-live="polite"></p>
+        <button class="btn" type="submit" data-i18n="bk.submit">Request the table</button>
+      </div>
+    </form>
+
+    <div class="bk-done" data-bk-done hidden>
+      <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+      <h2 class="h2" data-done-title>Table requested</h2>
+      <p data-done-text></p>
+      <div class="bk-done__actions"><a class="btn" href="#" data-ics download="kvali-booking.ics">Add to calendar</a><button class="btn btn--ghost" type="button" data-again>Make another booking</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div>
+      <p class="logo logo--footer"><span class="logo__mark" aria-hidden="true">ქ</span><span class="logo__name">Kvali</span></p>
+      <p data-i18n="foot.about">Georgian kitchen and qvevri wine by the sea. Bread from the tone oven, khinkali folded by hand.</p>
+    </div>
+    <div>
+      <h2 class="footer__h" data-i18n="foot.hours">Hours</h2>
+      <p data-i18n-html="foot.hoursText">Tue-Sun 12:00-23:00<br>Mon 17:00-23:00</p>
+    </div>
+    <div>
+      <h2 class="footer__h" data-i18n="foot.find">Find us</h2>
+      <p data-i18n-html="foot.address">14 Seaside Street, Batumi<br><a href="tel:+995555000000">+995 555 00 00 00</a></p>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 Kvali</span>
+    <span data-i18n-html="foot.concept">Site by <a href="https://github.com/dmitrii-mazurkevich">Dmitrii Mazurkevich</a>.</span>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/menu-data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
