@@ -24,7 +24,7 @@
     var m = location.search.match(/[?&]lang=([a-z]{2})/i);
     if (m && langs.indexOf(m[1].toLowerCase()) > -1) lang = m[1].toLowerCase();
     if (!lang) { try { var s = localStorage.getItem('kv-lang'); if (langs.indexOf(s) > -1) lang = s; } catch (e) {} }
-    if (!lang) { var n = navigator.language || ''; lang = /^ru/i.test(n) ? 'ru' : /^ka/i.test(n) ? 'ka' : 'en'; }
+    if (!lang) { lang = 'en'; }
     d.setAttribute('data-lang', lang);
     if (lang !== 'en') { d.className += ' i18n-pending'; setTimeout(function () { d.classList.remove('i18n-pending'); }, 1200); }
   })();
